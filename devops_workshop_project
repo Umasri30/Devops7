@@ -1,4 +1,6 @@
-public class CommandLineCalculator {
+package com.Project.Maven_app;
+
+public class App {
     public static void main(String[] args) {
         if (args.length != 3) {
             System.out.println("Usage: java CommandLineCalculator <num1> <operator> <num2>");
