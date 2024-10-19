@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class SimpleCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Simple Command-Line Calculator");
+        System.out.println("Enter two numbers and an operator (+, -, *, /):");
+
+        double num1 = Double.parseDouble(args[0]);
+        double num2 = Double.parseDouble(args[1]);
+        String operator = args[2];
+
+        double result;
+        switch (operator) {
+            case "+":
+                result = num1 + num2;
+                break;
+            case "-":
+                result = num1 - num2;
+                break;
+            case "*":
+                result = num1 * num2;
+                break;
+            case "/":
+                result = num1 / num2;
+                break;
+            default:
+                System.out.println("Invalid operator!");
+                return;
+        }
+
+        System.out.printf("Result: %.2f %s %.2f = %.2f%n", num1, operator, num2, result);
+    }
+}
